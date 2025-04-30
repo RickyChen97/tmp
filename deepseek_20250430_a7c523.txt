@@ -1,0 +1,10 @@
+  +----------------+     +------------+     +---------------+
+  | RabbitMQ Queue | --> | Monitoring | --> | Openshift API |
+  | (Message Rate) |     |  Service   |     | (Scale Pods)  |
+  +----------------+     +------------+     +---------------+
+                                ^
+                                |
+                        +----------------+
+                        | Scaling Policy |
+                        | (e.g., CPU/Msg)|
+                        +----------------+
